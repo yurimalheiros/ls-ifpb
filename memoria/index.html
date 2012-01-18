@@ -1,0 +1,118 @@
+
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="generator" content="HTML Tidy, see www.w3.org" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Anti-Alzheimer Game</title>
+
+		<script type="text/javascript" src="cufon-yui.js"></script>		
+		<script type="text/javascript" src="font/FattiPattiFLF.font.js"></script>
+		<script type="text/javascript" src="font/Gadolinium_Rounded.font.js"></script>
+		<script type="text/javascript">
+			Cufon.replace('body', {fontFamily: 'FattiPattiFLF'});
+			Cufon.replace('.rodape',{ fontFamily: 'gadolinium Rounded'});
+		</script>
+		
+		<!-- CARREGA FUNÇÕES GERAIS DO JOGO -->
+		<script type="text/javascript" src="scripts/jogadores.js"></script>
+		<script type="text/javascript" src="scripts/cartas.js"></script>
+		<script type="text/javascript" src="scripts/jogo.js"></script>		
+
+		<!-- CARREGA FUNÇÕES DO MINI-PLAYER DE MÚSICA E DO GIRA DA LOGOMARCA -->
+		<script type="text/javascript" src="scripts/mini-player.js"></script>
+		<link type="text/css" rel="stylesheet" href="styles.css" />
+		<link rel="shortcut icon" href="carta.ico" type="image/x-icon"/>
+	</head>
+	<body>
+		<!-- MINI-PLAYER DE MÚSICA -->
+		<div id="mini-player">Vai uma musiquinha? 
+			<img id="play-musica" src="images/media_play.png" />
+			<img id="stop-musica" src="images/media_stop.png" />
+		</div>
+		<!-- DIV ONDE CONTÉM A TAG 'AUDIO' DE MÚSICA -->
+		<div id="musica">
+			<audio id="player" autoplay="autoplay" loop controls="controls">
+				<source id="track" src="linkinpark_in_the_end_instrumental.ogg" type="audio/ogg"/>
+			</audio>
+		</div>
+		<!-- LOGOMARCA -->
+			<div id="logo">
+				<figure class="frente"><img src="images/logo.png"></figure>
+			</div>
+		
+		<!-- TODOS OS MENUS DISCRIMINADOS ABAIXO -->
+		<div id="menu">
+			<ul>
+				<li id="play">Iniciar Jogo</li>
+				<li id="instrucoes">Instruções</li>
+			</ul>
+			
+		</div>
+
+		<div id="menu3">
+			<ul>
+				<li id="x4">16 cartas</li>
+				<li id="x6">36 cartas</li>
+				<li id="voltar2">Voltar</li>
+			</ul>
+		</div>
+		<div id="menu2">
+			<ul>
+				<li id="um-jogador">1 Jogador</li>
+				<li id="dois-jogadores">2 Jogadores</li>
+				<li id="voltar1">Voltar</li>
+			</ul>
+		</div>
+		<div id="mesa-de-jogo">
+	
+			<!-- INFORMAÇÕES SOBRE A PARTIDA -->
+			<div id="barra-lateral">
+				<!-- NOME E PLACAR DE CADA JOGADOR -->
+				<div id="dados-jogo">
+					<span id="jogador1">Huguinho</span>
+					<br />
+					<span id="pts-jogador1">0</span>
+					<br />
+					<br />
+					<span id="jogador2">Zezinho</span>
+					<br />
+					<span id="pts-jogador2"></span>
+					<br />
+					<br />
+					<br />
+	
+					<!-- RESULTADO E ESTATÍSTICAS DO JOGO -->
+					<div id="fim-de-jogo">
+						<span id="resultado"></span><br /><br /><br />
+						Tentativas<br /><br />
+						<span id="tentativas-j1" class="stats"></span><br />
+						<span id="tentativas-j2" class="stats"></span><br /><br />
+						Tempo de Jogo<br />
+						<span id="tempo" class="stats"></span><br /><br /><br />
+					</div>
+				</div>
+				<br />
+				<br />
+				<ul class="menu-auxiliar">
+					<li id="back-menu">Menu Inicial</li>
+					<li id="resetar">Resetar/Novo Jogo</li>
+				</ul>
+			</div>
+
+			<!-- DIV ONDE É CRIADA A 'TABLE' COM AS CARTAS -->
+			<div id="cartas">
+
+				<!-- TEMA PARA SELEÇÃO DAS CARTAS -->
+				<div id="tema">
+					Selecione o Tema:
+					<select id="selecao-tema">
+                    	<option name="op-1" value="1" selected="selected">Navegadores Web</option>
+                        <option name="op-2" value="2">Países</option>
+                    </select>
+				</div>
+			</div>
+		</div>
+	<div class="rodape">Copyright © 2012 Anti-Alzheimer Game - Todos os direitos reservados<br />Desenvolvido por: Bruno Morais, Nelson Henrique e Ricardo Victor.</div>
+	</body>
+</html>

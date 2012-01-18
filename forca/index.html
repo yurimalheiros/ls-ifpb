@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Forca !!!</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- biblioteca jQuery -->
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="configs.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+  <link rel="stylesheet" href="style.css" /> 
+  <link rel="stylesheet" href="bootstrap.css" /> 
+</head>
+<body>
+
+  <div class=container>
+
+    <div class=hero-unit>
+
+      <h1>FORCA </h1>
+      
+      <div id="niveis">
+        <p id=nivelinfo>Selecione o nivel de dificuldade: </p>
+        <button type=submit class="btn nivel" value=facil>facil</button>
+        <button type=submit class="btn nivel" value=medio>medio</button> 
+        <button type=submit class="btn nivel" value=dificil>dificil</button>
+      </div>
+
+      <div class=content>
+
+        <div id=wrapper-image>
+          <img id="image" src="images/inicial.png" width="300" height="220" />
+        </div>
+
+        <div id=forca-form>
+
+          <p id="dica"> </p>
+          <!-- Recebe espaços com as palavras -->
+          <p id="palavra"> </p>
+          <!-- Form de onde usuário irá colocar a palavra -->
+          <form id="form">
+
+            <p id="frase_chance">
+              Você tem 
+                <!-- Recebe número de chances -->
+                <span id="chances"></span> 
+              chances.
+            </p>
+
+            <p id=dicainput>
+              Insira a letra e pressione ENTER
+              <input type="text" maxlength="1" style="width: 30px;" name="letra" id="letra" />
+            </p>
+          </form>  
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
